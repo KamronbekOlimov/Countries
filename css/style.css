@@ -1,261 +1,237 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
-.container{
-    max-width: 1280px;
-    margin: 0 auto;
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
 }
-body.active{
-    background-color: #202C36;
+body.active {
+  background-color: #202c36;
 }
-nav{
-    padding: 15px 0px;
-    box-shadow: 0px 0px 10px 3px #0000000E;
-    position: fixed;
-    width: 100%;
-    background-color: #FFFFFF;
+nav {
+  padding: 15px 0px;
+  box-shadow: 0px 0px 10px 3px #0000000e;
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
 }
-body.active nav{
-    background-color: #2B3844;
+body.active nav {
+  background-color: #2b3844;
 }
-nav .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-nav .container h3{
-    font-weight: 700;
-    font-size: 24px;
-    color: #111517;
+nav .container h3 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #111517;
 }
-nav .container button{
-    border: none;
-    color: #111517;
-    background-color: transparent;
-    font-size: 30px;
+nav .container button {
+  border: none;
+  color: #111517;
+  background-color: transparent;
+  font-size: 30px;
 }
-body.active nav .container button, body.active nav .container h3{
-    color: #FFFFFF;
+body.active nav .container button,
+body.active nav .container h3 {
+  color: #ffffff;
 }
-.hero{
-    padding: 75px 0px;
+.hero {
+  padding: 75px 0px;
 }
-.hero .container .countrieSearch{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 50px 0px;
+.hero .container .countrieSearch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 50px 0px;
 }
-.hero .container .countrieSearch form{
-    box-shadow: 0px 0px 10px 3px #0000000E;
-    background-color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 35%;
-    padding: 13px 25px;
-    border-radius: 3px;
+.hero .container .countrieSearch form {
+  box-shadow: 0px 0px 10px #0000000e;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 13px 20px;
+  border-radius: 3px;
 }
-body.active .hero .container .countrieSearch form{
-    background-color: #2B3844;
+body.active .hero .container .countrieSearch form {
+  background-color: #2b3844;
 }
-.hero .container .countrieSearch form button{
-    border: none;
-    background-color: transparent;
-    font-size: 20px;
+.hero .container .countrieSearch form button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
 }
-body.active .hero .container .countrieSearch form button{
-    color: #FFFFFF;
+body.active .hero .container .countrieSearch form button {
+  color: #ffffff;
 }
-.hero .container .countrieSearch form input{
-    border: none;
-    background-color: transparent;
-    font-size: 18px;
-    font-weight: 500;
-    color: #000000;
-    outline: none;
-    width: 90%;
+.hero .container .countrieSearch form input {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  outline: none;
+  width: 300px;
 }
-body.active .hero .container .countrieSearch form input{
-    color: #FFFFFF;
+body.active .hero .container .countrieSearch form input {
+  color: #ffffff;
 }
-.hero .container .countrieSearch form input::placeholder{
-    font-weight: 500;
-    text-align: left;
-    font-size: 18px;
-    color: #848484;
+.hero .container .countrieSearch form input::placeholder {
+  font-weight: 500;
+  text-align: left;
+  font-size: 18px;
+  color: #848484;
 }
-body.active .hero .container .countrieSearch form input::placeholder{
-    color: #bdbcbc;
+body.active .hero .container .countrieSearch form input::placeholder {
+  color: #bdbcbc;
 }
-.hero .container .countrieSearch select{
-    box-shadow: 0px 0px 10px 3px #0000000E;
-    font-weight: 500;
-    text-align: left;
-    font-size: 18px;
-    color: #000000;
-    outline: none;
-    border: none;
-    padding: 13px 25px;
-    border-radius: 3px;
+.hero .container .countrieSearch select {
+  box-shadow: 0px 0px 10px 3px #0000000e;
+  font-weight: 500;
+  text-align: left;
+  font-size: 18px;
+  color: #000000;
+  outline: none;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 3px;
 }
-body.active .hero .container .countrieSearch select{
-    background-color: #2B3844;
-    color: #FFFFFF;
+body.active .hero .container .countrieSearch select {
+  background-color: #2b3844;
+  color: #ffffff;
 }
-.hero .container .countrieSearch select option{
-    border: none;
-    padding: 13px 25px;
+.hero .container .countrieSearch select option {
+  border: none;
+  padding: 13px 25px;
 }
-.hero .container .countries{
-    flex-basis: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+.hero .container .countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+  grid-gap: 30px;
 }
-.hero .container .countries .card{
-    box-shadow: 0px 0px 10px 7px #0000000E;
-    border-radius: 5px;
-    overflow: hidden;
+.hero .container .countries .card {
+  box-shadow: 0px 0px 10px 7px #0000000e;
+  border-radius: 5px;
+  overflow: hidden;
 }
-.hero .container .countries .card.delete{
-    display: none;
+.hero .container .countries .card.delete {
+  display: none;
 }
-body.active .hero .container .countries .card{
-    background-color: #2B3844;
+body.active .hero .container .countries .card {
+  background-color: #2b3844;
 }
-.hero .container .countries .card .countriesInfo{
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  cursor: pointer;
 }
-.hero .container .countries .card h3{
-    font-size: 18px;
-    font-weight: 700;
-    color: #000000;
+.hero .container .countries .card .countriesInfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
 }
-body.active .hero .container .countries .card .countriesInfo h3{
-    color: #FFFFFF;
+.hero .container .countries .card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+body.active .hero .container .countries .card .countriesInfo h3 {
+  color: #ffffff;
 }
 
-.hero .container .countries .card .countriesInfo p{
-    color: #242c30;
-    font-weight: 300;
-    font-size: 14px;
+.hero .container .countries .card .countriesInfo p {
+  color: #242c30;
+  font-weight: 300;
+  font-size: 14px;
 }
-body.active .hero .container .countries .card .countriesInfo p{
-    color: #e7e3e3;
+body.active .hero .container .countries .card .countriesInfo p {
+  color: #e7e3e3;
 }
-.hero .container .countries .card .countriesInfo p b{
-    font-size: 14px;
-    font-weight: 600;
-    color: #000000;
+.hero .container .countries .card .countriesInfo p b {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
 }
-body.active .hero .container .countries .card .countriesInfo p b{
-    color: #FFFFFF;
+body.active .hero .container .countries .card .countriesInfo p b {
+  color: #ffffff;
 }
-.hero .container .countries .card a img{
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    background: #ddd;
+.hero .container .countries .card a img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background: #ddd;
 }
-.hero .container .countries .card .countriesInfo{
-    padding: 20px;
-}
-.loader{
-    display: none;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    background-color: #FFFFFF;
-    z-index: 2;
-    object-fit: 100%;
-}
-.loader.active{
-    display: flex;
+.hero .container .countries .card .countriesInfo {
+  padding: 20px;
 }
 @media (max-width: 1024px) {
-    .hero .container .countries{
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .container {
+    max-width: 900px;
+  }
+  nav .container h3{
+    font-size: 22px;
+  }
+  nav .container button{
+    font-size: 27px;
+  }
 }
 @media (max-width: 768px) {
-    .hero .container .countries{
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .container {
+    max-width: 650;
+  }
+  .countrieSearch form {
+    width: 300px;
+  }
+  .countrieSearch select{
+    width: 150px;
+  }
+  nav .container h3{
+    font-size: 21px;
+  }
+  nav .container button{
+    font-size: 24px;
+  }
 }
-@media (max-width: 640px) {
-    .hero .container .countries{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 430px) {
-    .hero .container .countries{
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-/* modal  */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1024;
+@media (max-width: 580px) {
+  .container {
+    max-width: 480px;
+  }
+  nav .container h3{
+    font-size: 18px;
+  }
+  .countries {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .hero .container .countrieSearch {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 30px;
+  }
+  .countrieSearch form {
     width: 100%;
-    height: 100%;
-    background: var(--color1);
-    display: none;
-    animation-name: fadeIn;
-    animation-duration: 0.3s;
+  }
+  nav .container button{
+    font-size: 22px;
+  }
 }
-
-.modal.show {
-    display: grid;
-    place-items: center;
-}
-
-.modal img {
-    max-width: 80%;
-    max-height: 80vh;
-    margin: auto;
-    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.25));
-}
-
-.modal figcaption {
-    margin-top: 1.5rem;
-    text-align: center;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--color0);
-}
-
-.modal button[data-dismiss] {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    background: transparent;
-    color: var(--color3);
-}
-
-.modal button[data-dismiss]:hover {
-    color: var(--color4);
-}
-
-.modal button[data-dismiss] span {
-    font-size: 42px;
+@media (max-width: 400px) {
+  .container {
+    max-width: 343px;
+  }
+  nav .container h3{
+    font-size: 15px;
+  }
+  nav .container button{
+    font-size: 20px;
+  }
 }

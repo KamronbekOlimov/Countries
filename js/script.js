@@ -2,7 +2,6 @@ let body = document.querySelector("body");
 let mode = document.querySelector(".mode");
 let localMode = localStorage.getItem(`mode`);
 let loader = document.querySelector(`.loader`)
-
 if (localMode) {
   body.classList.add(`active`);
   mode.innerHTML = `<i class="fa-regular fa-sun"></i>`;
@@ -18,30 +17,19 @@ mode.addEventListener(`click`, () => {
     mode.innerHTML = `<i class="fa-regular fa-sun"></i>`;
   }
 });
-
-let api_link = `https://restcountries.com/v3.1/all`;
+let API = `https://restcountries.com/v3.1/all`;
 let getData = async (api) => {
-  loader.classList.add(`active`)
-
   let req = await fetch(api);
   let data = await req.json();
-
   writeData(data);
-  loader.classList.remove(`active`)
 };
-getData(api_link);
-
+getData(API);
 let countries = document.querySelector(".countries");
-
 let writeData = (data) => {
-  let index = Math.floor(Math.random()*data.length - 16)
-  let countr = data.slice(index, index + 16);
-
   countries.innerHTML = ``;
-
   data.forEach((item) => {
     countries.innerHTML += `<div class="card">
-                <a onclick="" target="_blank" href=""><img src="${item.flags.svg}" alt=""></a>
+                <img src="${item.flags.svg}" alt="">
             <div class="countriesInfo">
                 <h3 class="countryName">${item.name.common}</h3>
                 <p><b>Population: </b><span>${item.population.toLocaleString("en")}</span></p>
@@ -51,10 +39,8 @@ let writeData = (data) => {
         </div>`;
   });
 }
-
 let select = document.querySelector(`select`);
 let input = document.querySelector(`input`)
-
 input.addEventListener(`input`, () => {
   let cardList = document.querySelectorAll(`.card`)
   cardList.forEach((card) => {
@@ -65,7 +51,6 @@ input.addEventListener(`input`, () => {
     }
   })
 })
-
 select.addEventListener('change', () => {
   let cardList = document.querySelectorAll('.card');
   cardList.forEach((card) => {
